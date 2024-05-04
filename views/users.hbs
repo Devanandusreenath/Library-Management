@@ -1,0 +1,92 @@
+<html>
+    <head>
+        <title>
+
+        </title>
+    </head>
+<body>
+<section style="background-color: #eee;">
+    <div class="row">
+      <div class="col">
+        <nav aria-label="breadcrumb" class="bg-light rounded-3 p-3 mb-4">
+          <ol class="breadcrumb mb-0">
+            <form action="/ho1"method="post">
+            <li class="breadcrumb-item"><button type="submit">Home</button></li>
+            </form>
+             <form action="/boo"method="post">
+            <li class="breadcrumb-item"><button type="submit">BOOKLIST</button></li>
+             </form>
+              <form action="/std"method="post">
+            <li class="breadcrumb-item"><button type="submit">STUDENTLIST</button></li>
+             </form>
+              <form action="/add"method="post">
+            <li class="breadcrumb-item"><button type="submit">ADD BOOKS</button></li>
+             </form>
+              <form action="/ret"method="post">
+            <li class="breadcrumb-item"><button type="submit">BOOKS NOT RETURNED</button></li>
+             </form>
+              <form action="/conta"method="post">
+            <li class="breadcrumb-item"><button type="submit">Contacts</button></li>
+             </form>
+              <form action="/nota"method="post">
+            <li class="breadcrumb-item"><button type="submit">Notifications</button></li>
+             </form>
+             <form action="/logout" method="post">
+            <li class="breadcrumb-item active" aria-current="page"><button type="submit">LOGOUT</button></li>
+             </form>
+          </ol>
+        </nav>
+      </div>
+    </div>
+
+  </section>
+  <section>
+<div class="row">
+    <div class="col-sm-2">
+      <h5 class="text-danger">FIRST NAME</h5>
+    </div>
+    <div class="col-sm-2">
+          <h5 class="text-danger">LAST NAME</h5>
+    </div>
+  <div class="col-sm-2">
+          <h5 class="text-danger">BRANCH</h5>
+    </div>
+      <div class="col-sm-2">
+          <h5 class="text-danger">PHONE</h5>
+    </div>
+      <div class="col-sm-2">
+          <h5 class="text-danger">EMAIL</h5>
+    </div>
+      <div class="col-sm-2">
+          <h5 class="text-danger">MEMBERSHIPID</h5>
+    </div>
+
+</div>
+{{#each u}}
+<p>
+<div class="row" >
+    <div class="col-sm-2">
+      <input type="text" value="{{field1}}"></div>
+    <div class="col-sm-2">
+        <input type="text" value="{{field2}}">
+    </div>
+  <div class="col-sm-2">
+        <input type="text" value="{{field3}}">
+    </div>
+      <div class="col-sm-2">
+          <input type="text" value="{{field4}}">
+    </div>
+      <div class="col-sm-2">
+          <input type="text" value="{{field5}}">
+    </div>
+      <div class="col-sm-2">
+          <input type="text" value="{{field6}}">
+    </div>
+
+</div>
+</p>
+{{/each}}
+  </section>
+</body>
+</html>
+

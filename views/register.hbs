@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management System - Registration</title>
+    <style>
+        body {
+            font-family:'Times New Roman', Times, serif, 'Arial Narrow', Arial, sans-serif, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-image: url('https://miro.medium.com/v2/resize:fit:1400/0*mMD5SlIbFvgkGo3l');
+            background-size: cover;
+            background-position: center;
+            
+        }
+        .container h2 {
+    margin-bottom: 20px;
+    color: rgb(244, 235, 235);
+    font-size: 28px; /* Add or adjust font size */
+    text-align: center; /* Align the text to the center */
+    text-transform: uppercase; /* Convert text to uppercase */
+    letter-spacing: 2px; /* Add letter spacing */
+    font-weight: bold; /* Make the text bold */
+    /* Add any additional styles you'd like */
+    text-decoration: underline; 
+        }
+
+        .container {
+            background-color: rgba(17, 16, 16, 0.6); /* Semi-transparent white background for better readability */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align:center;
+        }
+
+        .register-form {
+            max-width: 400px;
+            margin: 0 auto;
+        } 
+
+
+
+
+
+
+
+         select,
+     input {
+    width: 100%;
+    padding: 12px; /* Increase padding for better spacing */
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc; /* Use a subtle border color */
+    border-radius: 4px; /* Slightly round the corners */
+    background-color: #f5f5f5; /* A slightly lighter background color */
+    color: #191515; /* Text color */
+    transition: border-color 0.3s, background-color 0.3s; /* Smooth transition effect */
+
+    /* Add hover styles */
+}
+
+        
+        button {
+            background-color: #4caf50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        label {
+    display: block;
+    text-align: left;
+    margin: 10px 0 5px;
+    font-weight: bold; /* Make the label text bold */
+    color: #fffafa; /* Set a slightly darker color for the label text */
+}
+
+
+        .error-message {
+            color: red;
+            margin-top: 10px;
+        }
+        button:hover {
+         background-color: #bec324;
+        }
+    </style>
+</head>
+<body background="reg.jpg"></body>
+    <div class="container">
+        <h2>Library Management System - Registration</h2>
+        <div class="register-form">
+                <form action="/regist" method="post">
+                <input type="text" placeholder="First Name" name="firstName">
+                <input type="text" placeholder="Last Name" name="lastName">
+                <label for="Semester">Semester:</label>
+                <select id="Semester" name="Semester">
+                    <option value="S1">S1</option>
+                    <option value="S2">S2</option>
+                    <option value="S3">S3</option>
+                    <option value="S4">S4</option>
+                    <option value="S5">S5</option>
+                    <option value="S6">S6</option>
+                    <option value="S7">S7</option>
+                    <option value="S8">S8</option>
+                </select>
+                <input type="text" placeholder="Branch" name="Branch">
+                <input type="text" placeholder="Admission Number" name="admissionNumber">
+                <input type="text" placeholder="Roll Number" name="rollNumber">
+                <input type="tel" placeholder="Phone Number" name="phoneNumber">
+                <input type="email" placeholder="Email ID" name="email">
+                <button type="submit">Register</button>
+             </form>
+              
+        
+            <div class="error-message" id="errorMessage"></div>
+        </div>
+    </div>
+
+    <script>
+        function isValidEmail(email) {
+            // Regular expression for a basic email validation
+            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailRegex.test(email);
+        }
+        function register() {
+            var form = document.getElementById("registrationForm");
+            var errorMessage = document.getElementById("errorMessage");
+
+            // Check if any field is blank
+            for (var i = 0; i < form.elements.length - 1; i++) {
+                if (form.elements[i].value === "") {
+                    errorMessage.textContent = "All fields are required.";
+                    return;
+                }
+            }
+            // Check if the email is valid
+             var email = form.elements["email"].value;
+                if (!isValidEmail(email)) {
+                    errorMessage.textContent = "Please enter a valid email address.";
+                    return;
+                }
+
+            // All fields are filled, simulate sending a membership code to the provided email
+            var email = form.elements["email"].value;
+            alert("Membership code sent to " + email);
+            // Reset form and error message
+            form.reset();
+            errorMessage.textContent = "";
+        }
+    </script>
+</body>
+</html>

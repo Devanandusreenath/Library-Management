@@ -1,0 +1,62 @@
+<section style="background-color: #eee;">
+    <div class="row">
+      <div class="col">
+        <nav aria-label="breadcrumb" class="bg-light rounded-3 p-3 mb-4">
+          <ol class="breadcrumb mb-0">
+            <form action="/ho1"method="post">
+            <li class="breadcrumb-item"><button type="submit">Home</button></li>
+            </form>
+             <form action="/boo"method="post">
+            <li class="breadcrumb-item"><button type="submit">BOOKLIST</button></li>
+             </form>
+              <form action="/std"method="post">
+            <li class="breadcrumb-item"><button type="submit">STUDENTLIST</button></li>
+             </form>
+              <form action="/add"method="post">
+            <li class="breadcrumb-item"><button type="submit">ADD BOOKS</button></li>
+             </form>
+              <form action="/ret"method="post">
+            <li class="breadcrumb-item"><button type="submit">BOOKS NOT RETURNED</button></li>
+             </form>
+              <form action="/conta"method="post">
+            <li class="breadcrumb-item"><button type="submit">Contacts</button></li>
+             </form>
+              <form action="/nota"method="post">
+            <li class="breadcrumb-item"><button type="submit">Notifications</button></li>
+             </form>
+             <form action="/logout" method="post">
+            <li class="breadcrumb-item active" aria-current="page"><button type="submit">LOGOUT</button></li>
+             </form>
+          </ol>
+        </nav>
+      </div>
+    </div>
+</section>
+<section>
+<!-- Default form contact -->
+<form class="text-center border border-light p-5" action="/conts" method="post">
+
+    <p class="h4 mb-4">Contact us</p>
+
+    <!-- Name -->
+    <input type="text" id="defaultContactFormName" class="form-control mb-4" value="{{name}}" name="name" style="pointer-events: none;">
+
+    <!-- Email -->
+    <input type="email" id="defaultContactFormEmail" class="form-control mb-4" value="{{email}}" name="email" style="pointer-events: none;">
+    <input type="text" id="defaultContactFormEmail" class="form-control mb-4"  name="too" placeholder="TO">
+
+
+    <!-- Message -->
+    <div class="form-group">
+        <textarea class="form-control rounded-0" id="exampleFormControlTextarea2" rows="3" placeholder="Message" name="message"></textarea>
+    </div>
+
+    <!-- Copy -->
+    
+
+    <!-- Send button -->
+    <button class="btn btn-info btn-block" type="submit">Send</button>
+
+</form>
+</section>
+<!-- Default form contact -->
